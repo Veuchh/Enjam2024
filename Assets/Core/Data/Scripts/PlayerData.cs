@@ -5,6 +5,7 @@ public static class PlayerData
     public static Vector2 currentMoveInput;
     public static Orientation currentOrientation = Orientation.South;
 
+    public static int seed ;
     public static bool IsAttacking;
 
     public static bool CanMove => !IsAttacking;

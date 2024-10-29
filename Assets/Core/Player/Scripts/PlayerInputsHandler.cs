@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerInputsHandler : MonoBehaviour
 {
     [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] PlayerGardening playerGardening;
     [SerializeField] PlayerCombat playerCombat;
 
     public void OnMove(InputValue value)
@@ -12,6 +13,11 @@ public class PlayerInputsHandler : MonoBehaviour
         playerMovement.OnNewMoveInput(value.Get<Vector2>());
     }
 
+    public void OnSellPumpkin(InputValue value)
+    {
+        playerGardening.OnInteract();
+    }
+    
     public void OnAttackInFront(InputValue value)
     {
         playerCombat.OnAttackInFront();
