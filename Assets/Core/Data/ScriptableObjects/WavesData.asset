@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - ratAmount: 10
-    cooldownBeforeWave: 0
+    cooldownBeforeWave: 1
     spawnPointsAmount: 3
   - ratAmount: 10
-    cooldownBeforeWave: 0
+    cooldownBeforeWave: 3
     spawnPointsAmount: 3
-  endRandomWaves: []
+  endRandomWaves:
+  - ratAmount: 5
+    cooldownBeforeWave: 1
+    spawnPointsAmount: 2

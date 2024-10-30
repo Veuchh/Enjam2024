@@ -2,11 +2,15 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System;
 
 [SelectionBase]
 public class PlantSlot : MonoBehaviour
 {
     public static List<PlantSlot> slots = new List<PlantSlot>();
+
+    public static event Action onSlotPlanted;
+    
     [SerializeField] int sellingTime = 10;
     [SerializeField] SpriteRenderer spr;
     [SerializeField] GameObject enemyLayout;
@@ -26,6 +30,7 @@ public class PlantSlot : MonoBehaviour
     {
         Debug.Log("Slot was planted");
         SetNewSlotState(SlotState.planted);
+        onSlotPlanted?.Invoke();
     }
 
     public void Sell()
