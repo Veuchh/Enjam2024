@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] float attackRange = 1;
     [SerializeField] int maxHP = 1;
 
+    // VFX
+    [SerializeField] GameObject blood;
+
     int currentHP;
     float nextReevaluateTime = float.MinValue;
     bool isAttacking = false;
@@ -117,6 +120,8 @@ public class Enemy : MonoBehaviour
         }
         enemyAmount--;
         Destroy(gameObject);
+
+        Instantiate(blood, transform.position, Quaternion.identity);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
