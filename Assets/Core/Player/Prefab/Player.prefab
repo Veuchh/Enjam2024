@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 440426010372489566}
+  playerGardening: {fileID: 6006152840653871967}
 --- !u!114 &440426010372489566
 MonoBehaviour:
   m_ObjectHideFlags: 0
