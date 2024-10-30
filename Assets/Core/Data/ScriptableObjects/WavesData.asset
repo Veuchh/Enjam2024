@@ -13,12 +13,24 @@ MonoBehaviour:
   m_Name: WavesData
   m_EditorClassIdentifier: 
   waves:
-  - ratAmount: 10
-    cooldownBeforeWave: 1
-    spawnPointsAmount: 3
-  - ratAmount: 10
+  - ratAmount: 1
     cooldownBeforeWave: 3
     spawnPointsAmount: 3
+  - ratAmount: 2
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 2
+  - ratAmount: 2
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 1
+  - ratAmount: 4
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 1
+  - ratAmount: 6
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 1
+  - ratAmount: 2
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 1
   endRandomWaves:
   - ratAmount: 5
     cooldownBeforeWave: 1

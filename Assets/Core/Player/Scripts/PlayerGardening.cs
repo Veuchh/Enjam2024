@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerGardening : MonoBehaviour
@@ -6,7 +7,7 @@ public class PlayerGardening : MonoBehaviour
     int plantingCost = 10;
     [SerializeField]
     int defaultSeedAmount = 100;
-    PlantSlot currentSlot;
+    List<PlantSlot> nearbySlots = new List<PlantSlot>();
 
     private void Start()
     {
@@ -16,65 +17,78 @@ public class PlayerGardening : MonoBehaviour
 
     public void OnInteract()
     {
-        if (currentSlot == null)
+        if (nearbySlots.Count==0)
             return;
-        if (currentSlot.slotState == SlotState.empty)
+
+        PlantSlot closest = ClosestSlot();
+
+        if (closest.slotState == SlotState.empty)
         {
-            Debug.Log("Slot empty");
             if (PlayerData.seed >= plantingCost)
             {
                 PlayerData.seed -= plantingCost;
-                currentSlot.Plant();
+                closest.Plant();
             }
         }
-        else if (currentSlot.slotState == SlotState.planted)
+        else if (closest.slotState == SlotState.planted)
         {
-            if (!currentSlot.IsSelling && !currentSlot.isDismantling)
+            if (!closest.IsSelling && !closest.isDismantling)
             {
-                Debug.Log("Slot already planted");
-                currentSlot.Sell();
+                closest.Sell();
             }
-            else { Debug.Log("Plant in queue"); }
 
         }
     }
 
     public void OnDismantlePumpkin()
     {
-        if (currentSlot == null || currentSlot.slotState != SlotState.planted)
+        PlantSlot closest = ClosestSlot();
+
+        if (closest == null || closest.slotState != SlotState.planted)
             return;
 
-        if (!currentSlot.IsSelling && !currentSlot.isDismantling)
+        if (!closest.IsSelling && !closest.isDismantling)
         {
-            Debug.Log("Slot already planted");
-            currentSlot.Dismantle();
-        }
-        else
-        {
-            Debug.Log("Plant in queue");
+            closest.Dismantle();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlantSlot otherSlot = collision.GetComponent<PlantSlot>();
-        if (otherSlot == null)
+        if (otherSlot == null || nearbySlots.Contains(otherSlot))
         {
             return;
         }
-        currentSlot = otherSlot;
+        nearbySlots.Add(otherSlot);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         PlantSlot otherSlot = collision.GetComponent<PlantSlot>();
-        if (otherSlot != currentSlot)
+        if (otherSlot == null || !nearbySlots.Contains(otherSlot))
         {
             return;
         }
-        currentSlot = null;
+        nearbySlots.Remove(otherSlot);
     }
 
+    PlantSlot ClosestSlot()
+    {
+        PlantSlot bestCandidate = null;
+        float closestDistance = Mathf.Infinity;
 
+        foreach (PlantSlot slot in nearbySlots)
+        {
+            float distance = Vector3.Distance(transform.position, slot.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                bestCandidate = slot;
+            }
+        }
+
+        return bestCandidate;
+    }
 
 }
