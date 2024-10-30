@@ -39,11 +39,13 @@ public class PlantSlot : MonoBehaviour
         IsSelling = true;
         float startTime = Time.time;
         float endTime = Time.time + sellingTime;
+
         while (Time.time < endTime)
         {
             yield return null;
             sellUISpriteRenderer.material.SetFloat("_Arc2", Mathf.Lerp(360, 0, Mathf.InverseLerp(startTime, endTime, Time.time)));
         }
+
         sellUISpriteRenderer.material.SetFloat("_Arc2", 360);
         IsSelling = false;
         SetNewSlotState(SlotState.empty);
