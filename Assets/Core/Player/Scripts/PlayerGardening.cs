@@ -11,6 +11,7 @@ public class PlayerGardening : MonoBehaviour
     private void Start()
     {
         PlayerData.seed = defaultSeedAmount;
+     
     }
     public void OnInteract()
     {
@@ -27,8 +28,13 @@ public class PlayerGardening : MonoBehaviour
         }
         else if (currentSlot.slotState == SlotState.planted)
         {
-            Debug.Log("Slot already planted");
-            currentSlot.Sell();
+            if(!currentSlot.IsSelling)
+            {
+                Debug.Log("Slot already planted");
+                currentSlot.Sell();
+            }
+            else { Debug.Log("Plant in queue"); }
+
         }
 
     }

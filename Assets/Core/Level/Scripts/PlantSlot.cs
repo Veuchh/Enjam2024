@@ -12,6 +12,12 @@ public class PlantSlot : MonoBehaviour
     public static event Action onSlotPlanted;
     
     [SerializeField] int sellingTime = 10;
+    [SerializeField] float grossFactorSize ;
+    [SerializeField] float currentPumpkinSize = 1f;
+    [SerializeField] float MaxSize;
+    [SerializeField] float pumpkinGainPerSec;
+    [SerializeField] float pumpkinBenefits;
+    public GameObject pumpkinDisplay;
     [SerializeField] SpriteRenderer spr;
     [SerializeField] GameObject enemyLayout;
     [SerializeField] TextMeshPro enemyDisplayAmount;
@@ -30,6 +36,7 @@ public class PlantSlot : MonoBehaviour
     {
         Debug.Log("Slot was planted");
         SetNewSlotState(SlotState.planted);
+        StartCoroutine(IncreasePumpkinSize());
         onSlotPlanted?.Invoke();
     }
 
@@ -38,7 +45,25 @@ public class PlantSlot : MonoBehaviour
         StartCoroutine(SellDelay());
     }
 
-    //SellDelay
+    private void Update()
+    {
+        if(slotState == SlotState.planted)
+        {
+            pumpkinBenefits += pumpkinGainPerSec;
+        }
+    }
+
+    IEnumerator IncreasePumpkinSize()
+    {
+        float currentPumpkinSize =1f;
+        while(currentPumpkinSize<MaxSize)
+        {
+            pumpkinDisplay.transform.localScale += new Vector3(grossFactorSize, grossFactorSize, grossFactorSize);
+            currentPumpkinSize += grossFactorSize;
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
     IEnumerator SellDelay()
     {
         IsSelling = true;
@@ -60,6 +85,7 @@ public class PlantSlot : MonoBehaviour
 
     void SetNewSlotState(SlotState newState)
     {
+    	pumpkinDisplay.SetActive(newState == SlotState.planted);
         slotState = newState;
 
         switch (newState)
