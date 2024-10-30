@@ -12,6 +12,7 @@ public class PlantSlot : MonoBehaviour
 
     public static event Action onSlotPlanted;
     public static event Action<float> onPumpkinSold;
+    public static event Action<int> onPumpkinDismantled;
     public event Action onPumpkinDestroyed;
 
     [SerializeField] int sellingTime = 10;
@@ -20,6 +21,8 @@ public class PlantSlot : MonoBehaviour
     [SerializeField] float MaxSize;
     [SerializeField] float minValue;
     [SerializeField] float maxValue;
+    [SerializeField] int minSeedOnDismantle = 1;
+    [SerializeField] int maxSeedOnDismantle = 10;
     [SerializeField] GameObject pumpkinDisplay;
     [SerializeField] SpriteRenderer spr;
     [SerializeField] GameObject enemyLayout;
@@ -32,13 +35,15 @@ public class PlantSlot : MonoBehaviour
 
     public SlotState slotState = SlotState.empty;
     public bool IsSelling = false;
+    public bool isDismantling = false;
     int currentAttackerAmount;
     float startGrowthTime;
     float endGrowthTime;
 
-    Coroutine sellRoutine;
+    Coroutine removeRoutine;
 
     float PumpkinValue => Mathf.Lerp(minValue, maxValue, Mathf.InverseLerp(startGrowthTime, endGrowthTime, Time.time));
+    int PumpkinSeedAmount => Mathf.RoundToInt(Mathf.Lerp(minSeedOnDismantle, maxSeedOnDismantle, Mathf.InverseLerp(startGrowthTime, endGrowthTime, Time.time)));
 
     private void Awake()
     {
@@ -57,7 +62,12 @@ public class PlantSlot : MonoBehaviour
 
     public void Sell()
     {
-        sellRoutine = StartCoroutine(SellDelay());
+        removeRoutine = StartCoroutine(RemovePumpkinDelay(false));
+    }
+
+    public void Dismantle()
+    {
+        removeRoutine = StartCoroutine(RemovePumpkinDelay(true));
     }
 
     private void Update()
@@ -95,14 +105,14 @@ public class PlantSlot : MonoBehaviour
         pumpkinDisplay.transform.localScale = Vector3.one;
         hpBar.value = 1;
 
-        if (sellRoutine != null)
+        if (removeRoutine != null)
         {
-            StopCoroutine(sellRoutine);
-            sellRoutine = null;
+            StopCoroutine(removeRoutine);
+            removeRoutine = null;
         }
     }
 
-    IEnumerator SellDelay()
+    IEnumerator RemovePumpkinDelay(bool isDismantling)
     {
         IsSelling = true;
         float startTime = Time.time;
@@ -115,8 +125,10 @@ public class PlantSlot : MonoBehaviour
         }
 
         ResetSlot();
-        onPumpkinSold?.Invoke(PumpkinValue);
-        Debug.Log("Pumpkin was sold");
+        if (isDismantling)
+            onPumpkinDismantled?.Invoke(PumpkinSeedAmount);
+        else
+            onPumpkinSold?.Invoke(PumpkinValue);
     }
 
     void SetNewSlotState(SlotState newState)

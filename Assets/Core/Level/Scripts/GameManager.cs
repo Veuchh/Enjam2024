@@ -22,7 +22,20 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         PlantSlot.onSlotPlanted += StartGame;
+        PlantSlot.onSlotPlanted += UpdateSeedUI;
+        PlantSlot.onPumpkinDismantled += AddSeedToPlayerData;
         PlantSlot.onPumpkinSold += AddTime;
+    }
+
+    private void AddSeedToPlayerData(int seedToAdd)
+    {
+        PlayerData.seed += seedToAdd;
+        UpdateSeedUI();
+    }
+
+    public void UpdateSeedUI()
+    {
+        GameUI.Instance.UpdateSeedAmount(PlayerData.seed);
     }
 
     private void AddTime(float addedTime)
@@ -47,7 +60,8 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        Debug.LogWarning("TODO : End game method");
+        Debug.LogWarning("TODO : End game method => go to game over scene");
+        PlantSlot.onSlotPlanted += StartGame;
     }
 
     void StartGame()
