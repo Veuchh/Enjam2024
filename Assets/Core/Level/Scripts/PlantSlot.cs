@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using System;
+using UnityEngine.UI;
 
 [SelectionBase]
 public class PlantSlot : MonoBehaviour
@@ -26,6 +27,7 @@ public class PlantSlot : MonoBehaviour
     [SerializeField] SpriteRenderer sellUISpriteRenderer;
     [SerializeField] float pumpkinMaxHP = 100;
     [SerializeField] float ratDPS = 1;
+    [SerializeField] Slider hpBar;
     float pumpkinCurrentHP = 100;
 
     public SlotState slotState = SlotState.empty;
@@ -68,6 +70,7 @@ public class PlantSlot : MonoBehaviour
             }
 
             pumpkinCurrentHP -= ratDPS * Time.deltaTime * currentAttackerAmount;
+            hpBar.value = Mathf.InverseLerp(0, pumpkinMaxHP, pumpkinCurrentHP);
 
             if (pumpkinCurrentHP <= 0)
             {
@@ -89,6 +92,8 @@ public class PlantSlot : MonoBehaviour
         IsSelling = false;
         SetNewSlotState(SlotState.empty);
         RemoveAllAttackers();
+        pumpkinDisplay.transform.localScale = Vector3.one;
+        hpBar.value = 1;
 
         if (sellRoutine != null)
         {
@@ -116,6 +121,7 @@ public class PlantSlot : MonoBehaviour
 
     void SetNewSlotState(SlotState newState)
     {
+        hpBar.gameObject.SetActive(newState == SlotState.planted);
         pumpkinDisplay.SetActive(newState == SlotState.planted);
         slotState = newState;
 

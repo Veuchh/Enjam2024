@@ -106,6 +106,7 @@ public class Enemy : MonoBehaviour
         if (isAttacking)
         {
             targetPlant.RemoveAttacker();
+            targetPlant.onPumpkinDestroyed -= OnTargetDestroyed;
         }
 
         Destroy(gameObject);
