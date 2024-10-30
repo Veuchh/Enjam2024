@@ -15,7 +15,7 @@ public class SetSpriteOrderFromYPosition : MonoBehaviour
     {
         foreach (var sprite in spriteRenderers)
         {
-            sprite.sortingOrder = -Mathf.RoundToInt(transform.position.y) + additionalOrder;
+            sprite.sortingOrder = -Mathf.RoundToInt(transform.position.y) * 10 + additionalOrder;
         }        
     }
 }
