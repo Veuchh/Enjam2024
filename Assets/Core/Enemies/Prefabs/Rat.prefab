@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e753a066f867ba48b55e10de6cc5ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ratPrefab: {fileID: 969618796899664668}
   reevaluateTargetDelay: 0.5
   speed: 10
   attackRange: 1

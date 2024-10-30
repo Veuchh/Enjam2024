@@ -2,62 +2,98 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.Rendering;
 using System;
 
 [SelectionBase]
 public class PlantSlot : MonoBehaviour
 {
     public static List<PlantSlot> slots = new List<PlantSlot>();
+
+    public static event Action onSlotPlanted;
+    public static event Action<float> onPumpkinSold;
+    public event Action onPumpkinDestroyed;
+
     [SerializeField] int sellingTime = 10;
-    [SerializeField] float grossFactorSize ;
     [SerializeField] float currentPumpkinSize = 1f;
+    [SerializeField] float growthDuration = 2;
     [SerializeField] float MaxSize;
-    [SerializeField] float pumpkinGainPerSec;
-    [SerializeField] float pumpkinBenefits;
-    public GameObject pumpkinDisplay;
+    [SerializeField] float minValue;
+    [SerializeField] float maxValue;
+    [SerializeField] GameObject pumpkinDisplay;
     [SerializeField] SpriteRenderer spr;
     [SerializeField] GameObject enemyLayout;
     [SerializeField] TextMeshPro enemyDisplayAmount;
     [SerializeField] SpriteRenderer sellUISpriteRenderer;
+    [SerializeField] float pumpkinMaxHP = 100;
+    [SerializeField] float ratDPS = 1;
+    float pumpkinCurrentHP = 100;
 
     public SlotState slotState = SlotState.empty;
     public bool IsSelling = false;
     int currentAttackerAmount;
+    float startGrowthTime;
+    float endGrowthTime;
+
+    Coroutine sellRoutine;
+
+    float PumpkinValue => Mathf.Lerp(minValue, maxValue, Mathf.InverseLerp(startGrowthTime, endGrowthTime, Time.time));
 
     private void Awake()
     {
         slots.Add(this);
+        ResetSlot();
     }
 
     public void Plant()
     {
         Debug.Log("Slot was planted");
         SetNewSlotState(SlotState.planted);
-        StartCoroutine(IncreasePumpkinSize());
+        onSlotPlanted?.Invoke();
+        startGrowthTime = Time.time;
+        endGrowthTime = Time.time + growthDuration;
     }
 
     public void Sell()
     {
-        StartCoroutine(SellDelay());
+        sellRoutine = StartCoroutine(SellDelay());
     }
 
     private void Update()
     {
-        if(slotState == SlotState.planted)
+        if (slotState == SlotState.planted)
         {
-            pumpkinBenefits += pumpkinGainPerSec;
+            if (pumpkinDisplay.transform.localScale.x < MaxSize)
+            {
+                pumpkinDisplay.transform.localScale = Vector3.one * Mathf.Lerp(1, MaxSize, Mathf.InverseLerp(startGrowthTime, endGrowthTime, Time.time)); ;
+            }
+
+            pumpkinCurrentHP -= ratDPS * Time.deltaTime * currentAttackerAmount;
+
+            if (pumpkinCurrentHP <= 0)
+            {
+                DestroyPumpkin();
+            }
         }
     }
 
-    IEnumerator IncreasePumpkinSize()
+    void DestroyPumpkin()
     {
-        float currentPumpkinSize =1f;
-        while(currentPumpkinSize<MaxSize)
+        onPumpkinDestroyed?.Invoke();
+        ResetSlot();
+    }
+
+    private void ResetSlot()
+    {
+        pumpkinCurrentHP = pumpkinMaxHP;
+        sellUISpriteRenderer.material.SetFloat("_Arc2", 360);
+        IsSelling = false;
+        SetNewSlotState(SlotState.empty);
+        RemoveAllAttackers();
+
+        if (sellRoutine != null)
         {
-            pumpkinDisplay.transform.localScale += new Vector3(grossFactorSize, grossFactorSize, grossFactorSize);
-            currentPumpkinSize += grossFactorSize;
-            yield return new WaitForSeconds(1f);
+            StopCoroutine(sellRoutine);
+            sellRoutine = null;
         }
     }
 
@@ -66,21 +102,21 @@ public class PlantSlot : MonoBehaviour
         IsSelling = true;
         float startTime = Time.time;
         float endTime = Time.time + sellingTime;
+
         while (Time.time < endTime)
         {
             yield return null;
             sellUISpriteRenderer.material.SetFloat("_Arc2", Mathf.Lerp(360, 0, Mathf.InverseLerp(startTime, endTime, Time.time)));
         }
-        sellUISpriteRenderer.material.SetFloat("_Arc2", 360);
-        IsSelling = false;
-        SetNewSlotState(SlotState.empty);
-        RemoveAllAttackers();
-        Debug.Log("Slot was sold");
+
+        ResetSlot();
+        onPumpkinSold?.Invoke(PumpkinValue);
+        Debug.Log("Pumpkin was sold");
     }
 
     void SetNewSlotState(SlotState newState)
     {
-    	pumpkinDisplay.SetActive(newState == SlotState.planted);
+        pumpkinDisplay.SetActive(newState == SlotState.planted);
         slotState = newState;
 
         switch (newState)

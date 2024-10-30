@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1486974921865605643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5341128694779674986}
+  - component: {fileID: 8427757969613734277}
+  m_Layer: 0
+  m_Name: PumpkinGFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5341128694779674986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486974921865605643}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.361, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6321764773717203927}
+  m_Father: {fileID: 1469662210835114384}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8427757969613734277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486974921865605643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d9d3b59b8523d45af85fc9209775ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additionalOrder: 1
 --- !u!1 &4304053594841748562
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,12 +233,12 @@ GameObject:
   - component: {fileID: 6321764773717203927}
   - component: {fileID: 1065859924210055836}
   m_Layer: 0
-  m_Name: Pumpkin
+  m_Name: PlaceHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6321764773717203927
 Transform:
   m_ObjectHideFlags: 0
@@ -202,11 +248,11 @@ Transform:
   m_GameObject: {fileID: 5183766781187154256}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.125, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1469662210835114384}
+  m_Father: {fileID: 5341128694779674986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1065859924210055836
 SpriteRenderer:
@@ -251,7 +297,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.85660374, g: 0.41739175, b: 0, a: 1}
   m_FlipX: 0
@@ -480,8 +526,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8620357969571032464}
   - component: {fileID: 480802980813038952}
+  - component: {fileID: 3804109061667389787}
   m_Layer: 0
-  m_Name: Square
+  m_Name: SlotGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,6 +604,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3804109061667389787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881268112473125175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d9d3b59b8523d45af85fc9209775ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additionalOrder: -1
 --- !u!1 &8923383807122885090
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +651,7 @@ Transform:
   - {fileID: 8620357969571032464}
   - {fileID: 3047830684572040978}
   - {fileID: 4749502456031412051}
-  - {fileID: 6321764773717203927}
+  - {fileID: 5341128694779674986}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &5398161935181879371
@@ -643,11 +703,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sellingTime: 5
-  grossFactorSize: 0.2
-  MaxSize: 2
+  growthFactorSize: 0
+  currentPumpkinSize: 1
+  growthDuration: 20
+  MaxSize: 10
   pumpkinGainPerSec: 10
   pumpkinBenefits: 0
-  pumpkinDisplay: {fileID: 5183766781187154256}
+  pumpkinDisplay: {fileID: 1486974921865605643}
   spr: {fileID: 480802980813038952}
   enemyLayout: {fileID: 6495665495750751111}
   enemyDisplayAmount: {fileID: 5842706813886978995}

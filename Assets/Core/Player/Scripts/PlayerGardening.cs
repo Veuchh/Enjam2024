@@ -11,8 +11,8 @@ public class PlayerGardening : MonoBehaviour
     private void Start()
     {
         PlayerData.seed = defaultSeedAmount;
-     
     }
+
     public void OnInteract()
     {
         if (currentSlot == null)
