@@ -26,7 +26,8 @@ public class EnemySpawner : MonoBehaviour
 
     void StopEnemyWaves()
     {
-        if (enemySpawnRoutine != null) {
+        if (enemySpawnRoutine != null)
+        {
             StopCoroutine(enemySpawnRoutine);
             enemySpawnRoutine = null;
         }
@@ -53,11 +54,15 @@ public class EnemySpawner : MonoBehaviour
 
         for (int ratIndex = 0; ratIndex < wave.ratAmount; ratIndex++)
         {
-            int rand = Random.Range(0, possibleSpawnPoints.Count);
-            Transform targetSpawnPoint = possibleSpawnPoints[rand];
-            Enemy ratInstance = Instantiate(ratPrefab, targetSpawnPoint.position, Quaternion.identity);
-            Vector2 randomDir = Random.insideUnitCircle * spawnSpread;
-            ratInstance.transform.position += new Vector3(randomDir.x, randomDir.y, 0);
+            if (Enemy.enemyAmount < 150)
+            {
+                int rand = Random.Range(0, possibleSpawnPoints.Count);
+                Transform targetSpawnPoint = possibleSpawnPoints[rand];
+                Enemy ratInstance = Instantiate(ratPrefab, targetSpawnPoint.position, Quaternion.identity);
+                Vector2 randomDir = Random.insideUnitCircle * spawnSpread;
+                ratInstance.transform.position += new Vector3(randomDir.x, randomDir.y, 0);
+
+            }
         }
     }
 }

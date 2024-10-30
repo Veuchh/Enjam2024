@@ -16,9 +16,12 @@ public class Enemy : MonoBehaviour
     bool isAttacking = false;
     PlantSlot targetPlant;
 
+    public static int enemyAmount;
+
     private void Awake()
     {
         currentHP = maxHP;
+        enemyAmount++;
     }
 
     private void Update()
@@ -60,8 +63,12 @@ public class Enemy : MonoBehaviour
     {
         isAttacking = false;
         targetPlant.onPumpkinDestroyed -= OnTargetDestroyed;
-        Instantiate(ratPrefab, transform.position + Vector3.left, Quaternion.identity);
-        Instantiate(ratPrefab, transform.position + Vector3.right, Quaternion.identity);
+
+        if (enemyAmount < 150)
+        {
+            Instantiate(ratPrefab, transform.position + Vector3.left, Quaternion.identity);
+            Instantiate(ratPrefab, transform.position + Vector3.right, Quaternion.identity);
+        }
     }
 
     void Move()
@@ -108,7 +115,7 @@ public class Enemy : MonoBehaviour
             targetPlant.RemoveAttacker();
             targetPlant.onPumpkinDestroyed -= OnTargetDestroyed;
         }
-
+        enemyAmount--;
         Destroy(gameObject);
     }
 

@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
         PlantSlot.onSlotPlanted += StartGame;
         PlantSlot.onSlotPlanted += UpdateSeedUI;
         PlantSlot.onPumpkinDismantled += AddSeedToPlayerData;
