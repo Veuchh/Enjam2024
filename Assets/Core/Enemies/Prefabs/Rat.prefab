@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 969618796899664668}
   - component: {fileID: 2476998166834860787}
   - component: {fileID: 6459507174343776111}
+  - component: {fileID: 130532836509031331}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -139,6 +140,7 @@ MonoBehaviour:
   speed: 3
   attackRange: 1
   maxHP: 1
+  blood: {fileID: 7478509367550081771, guid: 53d2eae66f80c6a4d827138fe7c592c4, type: 3}
 --- !u!50 &2476998166834860787
 Rigidbody2D:
   serializedVersion: 5
@@ -212,3 +214,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &130532836509031331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459635170426421005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d9d3b59b8523d45af85fc9209775ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additionalOrder: 2
