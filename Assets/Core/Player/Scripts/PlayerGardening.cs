@@ -11,7 +11,7 @@ public class PlayerGardening : MonoBehaviour
     private void Start()
     {
         PlayerData.seed = defaultSeedAmount;
-        currentSlot.pumpkinDisplay.SetActive(false);
+     
     }
     public void OnInteract()
     {
