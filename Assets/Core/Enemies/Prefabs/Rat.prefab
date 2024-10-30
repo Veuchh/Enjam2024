@@ -139,6 +139,8 @@ MonoBehaviour:
   speed: 3
   attackRange: 1
   maxHP: 1
+  ratDeathSFX: {fileID: 11400000, guid: 97204ee1dd8f25c44b58eb77d2638cb2, type: 2}
+  ratSplatterSFX: {fileID: 11400000, guid: 4be0203c2882e40468d47424c3d33ae0, type: 2}
 --- !u!50 &2476998166834860787
 Rigidbody2D:
   serializedVersion: 5

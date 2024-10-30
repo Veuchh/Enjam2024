@@ -10,12 +10,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] float speed = 10f;
     [SerializeField] float attackRange = 1;
     [SerializeField] int maxHP = 1;
+    [SerializeField] SoundEffectData ratDeathSFX;
+    [SerializeField] SoundEffectData ratSplatterSFX;
 
     int currentHP;
     float nextReevaluateTime = float.MinValue;
     bool isAttacking = false;
     PlantSlot targetPlant;
-
+    const float ratDeathSFXcooldown = .2f;
+    static float nextAllowedSFX;
     public static int enemyAmount;
 
     private void Awake()
@@ -110,6 +113,13 @@ public class Enemy : MonoBehaviour
 
     private void KillEnnemy()
     {
+        if (Time.time > nextAllowedSFX)
+        {
+            nextAllowedSFX = Time.time + ratDeathSFXcooldown;
+        AudioPlayer.Instance.PlayAudio(ratDeathSFX);
+        AudioPlayer.Instance.PlayAudio(ratSplatterSFX);
+
+        }
         if (isAttacking)
         {
             targetPlant.RemoveAttacker();

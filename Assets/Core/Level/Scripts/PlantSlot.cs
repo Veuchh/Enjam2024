@@ -31,6 +31,10 @@ public class PlantSlot : MonoBehaviour
     [SerializeField] float pumpkinMaxHP = 100;
     [SerializeField] float ratDPS = 1;
     [SerializeField] Slider hpBar;
+    [SerializeField] SoundEffectData plantSFX;
+    [SerializeField] SoundEffectData pumpkinDestroyedSFX;
+    [SerializeField] SoundEffectData pumpkinDismantledSFX;
+    [SerializeField] SoundEffectData pumpkinSoldSFX;
     float pumpkinCurrentHP = 100;
 
     public SlotState slotState = SlotState.empty;
@@ -58,6 +62,7 @@ public class PlantSlot : MonoBehaviour
         onSlotPlanted?.Invoke();
         startGrowthTime = Time.time;
         endGrowthTime = Time.time + growthDuration;
+        AudioPlayer.Instance.PlayAudio(plantSFX);
     }
 
     public void Sell()
@@ -91,6 +96,7 @@ public class PlantSlot : MonoBehaviour
 
     void DestroyPumpkin()
     {
+        AudioPlayer.Instance.PlayAudio(pumpkinDestroyedSFX);
         onPumpkinDestroyed?.Invoke();
         ResetSlot();
     }
@@ -126,9 +132,15 @@ public class PlantSlot : MonoBehaviour
 
         ResetSlot();
         if (isDismantling)
+        {
             onPumpkinDismantled?.Invoke(PumpkinSeedAmount);
+            AudioPlayer.Instance.PlayAudio(pumpkinDismantledSFX);
+        }
         else
+        {
             onPumpkinSold?.Invoke(PumpkinValue);
+            AudioPlayer.Instance.PlayAudio(pumpkinSoldSFX);
+        }
     }
 
     void SetNewSlotState(SlotState newState)

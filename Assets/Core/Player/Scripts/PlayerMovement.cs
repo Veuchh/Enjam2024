@@ -4,6 +4,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float moveSpeed = 1;
+    [SerializeField] float footstepCooldown = .33f;
+    [SerializeField] SoundEffectData footstepSFX;
+
+    float nextAllowedFootstep;
 
     private void FixedUpdate()
     {
@@ -34,6 +38,12 @@ public class PlayerMovement : MonoBehaviour
         {
             if (PlayerData.currentMoveInput.y > 0) PlayerData.currentOrientation = Orientation.North;
             else PlayerData.currentOrientation = Orientation.South;
+        }
+
+        if (Time.time > nextAllowedFootstep)
+        {
+            nextAllowedFootstep = Time.time + footstepCooldown;
+            AudioPlayer.Instance.PlayAudio(footstepSFX);
         }
     }
 

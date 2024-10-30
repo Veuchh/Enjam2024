@@ -1069,8 +1069,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8620357969571032464}
   - {fileID: 3047830684572040978}
@@ -1130,9 +1130,11 @@ MonoBehaviour:
   sellingTime: 2
   currentPumpkinSize: 1
   growthDuration: 15
-  MaxSize: 10
+  MaxSize: 6
   minValue: 1
   maxValue: 30
+  minSeedOnDismantle: 1
+  maxSeedOnDismantle: 10
   pumpkinDisplay: {fileID: 1486974921865605643}
   spr: {fileID: 480802980813038952}
   enemyLayout: {fileID: 6495665495750751111}
@@ -1141,5 +1143,10 @@ MonoBehaviour:
   pumpkinMaxHP: 100
   ratDPS: 1
   hpBar: {fileID: 6406326341158421433}
+  plantSFX: {fileID: 11400000, guid: cac6c4c6044628140814e1e97a978d22, type: 2}
+  pumpkinDestroyedSFX: {fileID: 11400000, guid: d610665411cec38479af339e120f51a1, type: 2}
+  pumpkinDismantledSFX: {fileID: 11400000, guid: b70f4ea407cfbc34ca816d590a2925d7, type: 2}
+  pumpkinSoldSFX: {fileID: 11400000, guid: ae02226f97422ae47b8b708668954bf6, type: 2}
   slotState: 0
   IsSelling: 0
+  isDismantling: 0
