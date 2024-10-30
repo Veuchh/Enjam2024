@@ -54,7 +54,6 @@ public class EnemySpawner : MonoBehaviour
         for (int ratIndex = 0; ratIndex < wave.ratAmount; ratIndex++)
         {
             int rand = Random.Range(0, possibleSpawnPoints.Count);
-            Debug.Log(rand);
             Transform targetSpawnPoint = possibleSpawnPoints[rand];
             Enemy ratInstance = Instantiate(ratPrefab, targetSpawnPoint.position, Quaternion.identity);
             Vector2 randomDir = Random.insideUnitCircle * spawnSpread;

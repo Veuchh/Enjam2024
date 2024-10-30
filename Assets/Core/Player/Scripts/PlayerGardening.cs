@@ -11,13 +11,14 @@ public class PlayerGardening : MonoBehaviour
     private void Start()
     {
         PlayerData.seed = defaultSeedAmount;
+        GameManager.Instance.UpdateSeedUI();
     }
 
     public void OnInteract()
     {
         if (currentSlot == null)
             return;
-        if(currentSlot.slotState == SlotState.empty)
+        if (currentSlot.slotState == SlotState.empty)
         {
             Debug.Log("Slot empty");
             if (PlayerData.seed >= plantingCost)
@@ -28,7 +29,7 @@ public class PlayerGardening : MonoBehaviour
         }
         else if (currentSlot.slotState == SlotState.planted)
         {
-            if(!currentSlot.IsSelling)
+            if (!currentSlot.IsSelling && !currentSlot.isDismantling)
             {
                 Debug.Log("Slot already planted");
                 currentSlot.Sell();
@@ -36,7 +37,22 @@ public class PlayerGardening : MonoBehaviour
             else { Debug.Log("Plant in queue"); }
 
         }
+    }
 
+    public void OnDismantlePumpkin()
+    {
+        if (currentSlot == null || currentSlot.slotState != SlotState.planted)
+            return;
+
+        if (!currentSlot.IsSelling && !currentSlot.isDismantling)
+        {
+            Debug.Log("Slot already planted");
+            currentSlot.Dismantle();
+        }
+        else
+        {
+            Debug.Log("Plant in queue");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,6 +75,6 @@ public class PlayerGardening : MonoBehaviour
         currentSlot = null;
     }
 
-    
+
 
 }

@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ratPrefab: {fileID: 969618796899664668}
   reevaluateTargetDelay: 0.5
-  speed: 10
+  speed: 3
   attackRange: 1
   maxHP: 1
 --- !u!50 &2476998166834860787

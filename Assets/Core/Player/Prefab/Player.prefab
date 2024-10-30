@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5717151699517879207}
-  moveSpeed: 5
+  moveSpeed: 10
 --- !u!50 &5717151699517879207
 Rigidbody2D:
   serializedVersion: 5
@@ -795,8 +795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddc97e57eaed8240b1701424910a03d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantingCost: 10
-  defaultSeedAmount: 100
+  plantingCost: 1
+  defaultSeedAmount: 10
 --- !u!114 &2948281212942209134
 MonoBehaviour:
   m_ObjectHideFlags: 0
