@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 1680944695}
   - component: {fileID: 1680944694}
   - component: {fileID: 1680944693}
+  - component: {fileID: 1680944697}
   - component: {fileID: 1680944696}
   m_Layer: 0
   m_Name: Main Camera
@@ -181,7 +182,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -213,6 +214,38 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1680944696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680944692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CustomBlends: {fileID: 0}
+--- !u!114 &1680944697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,17 +289,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &1692234698 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6006152840653871967, guid: fd88dfa1d425e26409f70faa1f6b4b53, type: 3}
-  m_PrefabInstance: {fileID: 4914180285632385706}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ddc97e57eaed8240b1701424910a03d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2019460380
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,80 +499,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4603051965942590846, guid: fd88dfa1d425e26409f70faa1f6b4b53, type: 3}
-      propertyPath: playerGardening
-      value: 
-      objectReference: {fileID: 1692234698}
-    - target: {fileID: 6006152840653871967, guid: fd88dfa1d425e26409f70faa1f6b4b53, type: 3}
-      propertyPath: defaultSeedAmount
-      value: 100
+    - target: {fileID: 6574147047947001688, guid: fd88dfa1d425e26409f70faa1f6b4b53, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574147047947001688, guid: fd88dfa1d425e26409f70faa1f6b4b53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 8531158217428185172, guid: fd88dfa1d425e26409f70faa1f6b4b53, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717983213750481867, guid: fd88dfa1d425e26409f70faa1f6b4b53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd88dfa1d425e26409f70faa1f6b4b53, type: 3}
---- !u!1001 &8944508721756233621
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.048982147
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469662210835114384, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8923383807122885090, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
-      propertyPath: m_Name
-      value: PlantSlot
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7d291b6ddcb730949925e2acd3938cc7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -558,4 +527,3 @@ SceneRoots:
   - {fileID: 1680944695}
   - {fileID: 4914180285632385706}
   - {fileID: 2019460384}
-  - {fileID: 8944508721756233621}
