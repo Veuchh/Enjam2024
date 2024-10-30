@@ -33,13 +33,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "AttackInFront",
                     "type": "Button",
                     "id": "7edc0b40-97ee-49f2-868f-b81ab941ea2b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "AttackMousePos",
+                    "type": "Button",
+                    "id": "e2b9849e-0b89-43d6-b8dd-c3b28a04aed3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -221,23 +230,23 @@
                 },
                 {
                     "name": "",
-                    "id": "df691fd9-da7d-4d84-af5a-480a8c2ef5cd",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "1de7818c-21c8-4751-bde4-3e208857599f",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "AttackInFront",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f1667c69-ad6d-4d57-bafa-b9a218a0ddc0",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AttackMousePos",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
