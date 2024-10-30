@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     const string PLAYER_ATTACK_TAG = "PlayerDamageCollider";
 
+    [SerializeField] Enemy ratPrefab;
     [SerializeField] float reevaluateTargetDelay = .5f;
     [SerializeField] float speed = 10f;
     [SerializeField] float attackRange = 1;
@@ -52,6 +53,15 @@ public class Enemy : MonoBehaviour
     {
         isAttacking = true;
         targetPlant.AddAttacker();
+        targetPlant.onPumpkinDestroyed += OnTargetDestroyed;
+    }
+
+    private void OnTargetDestroyed()
+    {
+        isAttacking = false;
+        targetPlant.onPumpkinDestroyed -= OnTargetDestroyed;
+        Instantiate(ratPrefab, transform.position + Vector3.left, Quaternion.identity);
+        Instantiate(ratPrefab, transform.position + Vector3.right, Quaternion.identity);
     }
 
     void Move()
@@ -69,7 +79,7 @@ public class Enemy : MonoBehaviour
             if (slot.slotState != SlotState.planted)
                 continue;
 
-            float slotDistance = Vector2.Distance(transform.position, slot.transform.position);
+            float slotDistance = Vector2.SqrMagnitude(transform.position - slot.transform.position);
 
             if (slotDistance < bestDistance)
             {
