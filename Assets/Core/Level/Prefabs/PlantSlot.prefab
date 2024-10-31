@@ -1377,3 +1377,4 @@ MonoBehaviour:
   IsSelling: 0
   isDismantling: 0
   dismantledVFX: {fileID: 7478509367550081771, guid: 3e3c0bd72f5ae564abee2cc46b7ca9a9, type: 3}
+  soldVFX: {fileID: 7478509367550081771, guid: 68a0187db3c3b0a47b4e3db7b3383e13, type: 3}

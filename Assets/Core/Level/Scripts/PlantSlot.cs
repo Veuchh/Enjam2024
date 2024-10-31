@@ -39,6 +39,7 @@ public class PlantSlot : MonoBehaviour
 
     // VFX
     [SerializeField] GameObject dismantledVFX;
+    [SerializeField] GameObject soldVFX;
 
     int currentAttackerAmount;
     float startGrowthTime;
@@ -72,7 +73,6 @@ public class PlantSlot : MonoBehaviour
     public void Dismantle()
     {
         removeRoutine = StartCoroutine(RemovePumpkinDelay(true));
-        Instantiate(dismantledVFX, transform.position, Quaternion.identity);
     }
 
     private void Update()
@@ -134,6 +134,8 @@ public class PlantSlot : MonoBehaviour
             onPumpkinDismantled?.Invoke(PumpkinSeedAmount);
         else
             onPumpkinSold?.Invoke(PumpkinValue);
+
+        Instantiate(isDismantling ? dismantledVFX : soldVFX, transform.position, Quaternion.identity);
     }
 
     void SetNewSlotState(SlotState newState)
