@@ -36,6 +36,11 @@ public class PlantSlot : MonoBehaviour
     public SlotState slotState = SlotState.empty;
     public bool IsSelling = false;
     public bool isDismantling = false;
+
+    // VFX
+    [SerializeField] GameObject dismantledVFX;
+    [SerializeField] GameObject soldVFX;
+
     int currentAttackerAmount;
     float startGrowthTime;
     float endGrowthTime;
@@ -129,6 +134,8 @@ public class PlantSlot : MonoBehaviour
             onPumpkinDismantled?.Invoke(PumpkinSeedAmount);
         else
             onPumpkinSold?.Invoke(PumpkinValue);
+
+        Instantiate(isDismantling ? dismantledVFX : soldVFX, transform.position, Quaternion.identity);
     }
 
     void SetNewSlotState(SlotState newState)
