@@ -1362,9 +1362,9 @@ MonoBehaviour:
   growthDuration: 15
   MaxSize: 10
   minValue: 1
-  maxValue: 30
+  maxValue: 20
   minSeedOnDismantle: 1
-  maxSeedOnDismantle: 10
+  maxSeedOnDismantle: 4
   pumpkinDisplay: {fileID: 1486974921865605643}
   clodSpr: {fileID: 480802980813038952}
   pumpkinSpr: {fileID: 1065859924210055836}

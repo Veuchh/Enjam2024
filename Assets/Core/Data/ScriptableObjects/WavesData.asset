@@ -15,7 +15,7 @@ MonoBehaviour:
   waves:
   - ratAmount: 1
     cooldownBeforeWave: 3
-    spawnPointsAmount: 3
+    spawnPointsAmount: 1
   - ratAmount: 2
     cooldownBeforeWave: 5
     spawnPointsAmount: 2
@@ -28,10 +28,46 @@ MonoBehaviour:
   - ratAmount: 6
     cooldownBeforeWave: 5
     spawnPointsAmount: 1
+  - ratAmount: 4
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 1
   - ratAmount: 2
+    cooldownBeforeWave: 1
+    spawnPointsAmount: 1
+  - ratAmount: 7
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 4
+  - ratAmount: 1
+    cooldownBeforeWave: 7
+    spawnPointsAmount: 1
+  - ratAmount: 3
+    cooldownBeforeWave: 2
+    spawnPointsAmount: 2
+  - ratAmount: 6
+    cooldownBeforeWave: 3
+    spawnPointsAmount: 1
+  - ratAmount: 4
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 1
+  - ratAmount: 4
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 1
+  - ratAmount: 4
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 1
+  - ratAmount: 4
+    cooldownBeforeWave: 5
+    spawnPointsAmount: 1
+  - ratAmount: 4
     cooldownBeforeWave: 5
     spawnPointsAmount: 1
   endRandomWaves:
   - ratAmount: 5
+    cooldownBeforeWave: 2
+    spawnPointsAmount: 4
+  - ratAmount: 2
     cooldownBeforeWave: 1
-    spawnPointsAmount: 2
+    spawnPointsAmount: 1
+  - ratAmount: 10
+    cooldownBeforeWave: 3
+    spawnPointsAmount: 5

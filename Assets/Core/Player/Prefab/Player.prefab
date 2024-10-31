@@ -716,7 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantingCost: 1
-  defaultSeedAmount: 10
+  defaultSeedAmount: 5
 --- !u!114 &2948281212942209134
 MonoBehaviour:
   m_ObjectHideFlags: 0
