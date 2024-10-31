@@ -31,6 +31,14 @@ public class PlantSlot : MonoBehaviour
     [SerializeField] float pumpkinMaxHP = 100;
     [SerializeField] float ratDPS = 1;
     [SerializeField] Slider hpBar;
+    [SerializeField] SoundEffectData plantSFX;
+    [SerializeField] SoundEffectData pumpkinDestroyedSFX;
+    [SerializeField] SoundEffectData pumpkinDismantledSFX;
+    [SerializeField] SoundEffectData pumpkinSoldSFX;
+    [SerializeField] SoundEffectData pumpkinAttackedSFX;
+    [SerializeField] float attackSFXCooldown = .5f;
+
+    float NextAllowedAttackSFX;
     float pumpkinCurrentHP = 100;
 
     public SlotState slotState = SlotState.empty;
@@ -63,6 +71,7 @@ public class PlantSlot : MonoBehaviour
         onSlotPlanted?.Invoke();
         startGrowthTime = Time.time;
         endGrowthTime = Time.time + growthDuration;
+        AudioPlayer.Instance.PlayAudio(plantSFX);
     }
 
     public void Sell()
@@ -91,11 +100,18 @@ public class PlantSlot : MonoBehaviour
             {
                 DestroyPumpkin();
             }
+
+            if (NextAllowedAttackSFX < Time.time && currentAttackerAmount > 0)
+            {
+                AudioPlayer.Instance.PlayAudio(pumpkinAttackedSFX);
+                NextAllowedAttackSFX = Time.time + currentAttackerAmount;
+            }
         }
     }
 
     void DestroyPumpkin()
     {
+        AudioPlayer.Instance.PlayAudio(pumpkinDestroyedSFX);
         onPumpkinDestroyed?.Invoke();
         ResetSlot();
     }
@@ -131,9 +147,15 @@ public class PlantSlot : MonoBehaviour
 
         ResetSlot();
         if (isDismantling)
+        {
             onPumpkinDismantled?.Invoke(PumpkinSeedAmount);
+            AudioPlayer.Instance.PlayAudio(pumpkinDismantledSFX);
+        }
         else
+        {
             onPumpkinSold?.Invoke(PumpkinValue);
+            AudioPlayer.Instance.PlayAudio(pumpkinSoldSFX);
+        }
 
         Instantiate(isDismantling ? dismantledVFX : soldVFX, transform.position, Quaternion.identity);
     }

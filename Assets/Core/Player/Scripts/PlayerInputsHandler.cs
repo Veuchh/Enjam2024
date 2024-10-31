@@ -8,6 +8,13 @@ public class PlayerInputsHandler : MonoBehaviour
     [SerializeField] PlayerGardening playerGardening;
     [SerializeField] PlayerCombat playerCombat;
 
+    Camera mainCamera;
+
+    private void Awake()
+    {
+        mainCamera = Camera.main;    
+    }
+
     public void OnMove(InputValue value)
     {
         playerMovement.OnNewMoveInput(value.Get<Vector2>());
@@ -25,12 +32,15 @@ public class PlayerInputsHandler : MonoBehaviour
 
     public void OnAttackMousePos(InputValue value)
     {
-        Vector2 mouseDir = Input.mousePosition;
+        // Get the position of the mouse in screen coordinates
+        Vector3 mousePosition = Input.mousePosition;
 
-        mouseDir.x = Mathf.InverseLerp(0, Screen.width, mouseDir.x);
-        mouseDir.y = Mathf.InverseLerp(0, Screen.height, mouseDir.y);
+        // Convert the screen coordinates to world coordinates
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, transform.position.z));
 
-        mouseDir -= Vector2.one / 2;
-        playerCombat.OnMousePosAttack(mouseDir.normalized);
+        // Calculate the direction from the transform's position to the mouse position
+        Vector3 direction = mouseWorldPosition - transform.position;
+
+        playerCombat.OnMousePosAttack(direction);
     }
 }

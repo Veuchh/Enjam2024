@@ -592,6 +592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5717151699517879207}
   moveSpeed: 10
+  footstepCooldown: 0.33
+  footstepSFX: {fileID: 11400000, guid: 961c703d7d08d1d4eb7b282b09a70872, type: 2}
 --- !u!50 &5717151699517879207
 Rigidbody2D:
   serializedVersion: 5
@@ -675,6 +677,7 @@ MonoBehaviour:
   southCollider: {fileID: 1302510135456822840}
   westCollider: {fileID: 7378130730733152010}
   eastCollider: {fileID: 2891755288815173637}
+  attackData: {fileID: 11400000, guid: d9be26b51467c1a4d91ad95b3c80efb4, type: 2}
 --- !u!114 &7174643583918416535
 MonoBehaviour:
   m_ObjectHideFlags: 0
