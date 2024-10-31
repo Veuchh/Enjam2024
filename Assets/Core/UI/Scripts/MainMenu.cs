@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +9,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Button tutorialButton;
     [SerializeField] GameObject tutorialScreen;
     [SerializeField] Button quitButton;
+    [SerializeField] TextMeshProUGUI scoreLabel;
     [SerializeField] string gameSceneName = "Game";
 
     private void Awake()
@@ -14,6 +17,15 @@ public class MainMenu : MonoBehaviour
         startButton.onClick.AddListener(OnStartButtonPressed);
         tutorialButton.onClick.AddListener(OnTutorialButtonPressed);
         quitButton.onClick.AddListener(OnQuitButtonPressed);
+        UpdateBestScoreUI();
+    }
+
+    private void UpdateBestScoreUI()
+    {
+        if (PlayerData.bestTime != 0)
+            scoreLabel.text = $"Best surviving time :\n{PlayerData.bestTime.ToString("F2")}";
+        else 
+            scoreLabel.gameObject.SetActive(false);
     }
 
     private void OnDestroy()
@@ -30,7 +42,7 @@ public class MainMenu : MonoBehaviour
 
     void OnTutorialButtonPressed()
     {
-        tutorialScreen.SetActive(true); 
+        tutorialScreen.SetActive(true);
         startButton.interactable = false;
         tutorialButton.interactable = false;
         quitButton.interactable = false;

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     float startTime;
     float endTime;
 
-        private void Awake()
+    private void Awake()
     {
         if (Instance != null)
         {
@@ -24,6 +24,14 @@ public class GameManager : MonoBehaviour
         PlantSlot.onSlotPlanted += UpdateSeedUI;
         PlantSlot.onPumpkinDismantled += AddSeedToPlayerData;
         PlantSlot.onPumpkinSold += AddTime;
+    }
+
+    private void OnDestroy()
+    {
+
+        PlantSlot.onSlotPlanted -= UpdateSeedUI;
+        PlantSlot.onPumpkinDismantled -= AddSeedToPlayerData;
+        PlantSlot.onPumpkinSold -= AddTime;
     }
 
     private void AddSeedToPlayerData(int seedToAdd)
@@ -44,7 +52,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (!isGameOngoing) 
+        if (!isGameOngoing)
             return;
 
         float timeRatio = Mathf.InverseLerp(0, maxTime, endTime - Time.time);
@@ -61,7 +69,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.LogWarning("TODO : End game method => go to game over scene");
         PlantSlot.onSlotPlanted += StartGame;
-        PlayerData.bestTime = endTime - startTime;
+
+        float survivedTime = endTime - startTime;
+        if (survivedTime > PlayerData.bestTime)
+            PlayerData.bestTime = endTime - startTime;
+
         LevelLoader.Instance.LoadScene("MainMenu");
     }
 
