@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.LogWarning("TODO : End game method => go to game over scene");
         PlantSlot.onSlotPlanted += StartGame;
+        PlayerData.bestTime = endTime - startTime;
+        LevelLoader.Instance.LoadScene("MainMenu");
     }
 
     void StartGame()

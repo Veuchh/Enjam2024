@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 65ef7a11ae52b2d4ebea7a643bb07155
+guid: 61d9511a44a08d54898648d157295a0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7060797839338906237
-    second: clod_0
+      213: 3765129171237076273
+    second: burlap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clod_0
+      name: burlap_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 1078
-        height: 1080
+        x: 20
+        y: 2
+        width: 147
+        height: 219
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38ddb5b56c1030e90800000000000000
-      internalID: -7060797839338906237
+      spriteID: 13dfb01680d604430800000000000000
+      internalID: 3765129171237076273
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6894428e0ab07c94089adb8396424ae3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      clod_0: -7060797839338906237
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

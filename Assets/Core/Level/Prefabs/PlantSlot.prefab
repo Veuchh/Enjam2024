@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5341128694779674986}
-  - component: {fileID: 8427757969613734277}
   - component: {fileID: 4235586615651389115}
   m_Layer: 0
   m_Name: PumpkinGFX
@@ -36,19 +35,6 @@ Transform:
   - {fileID: 6321764773717203927}
   m_Father: {fileID: 1469662210835114384}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8427757969613734277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486974921865605643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2d9d3b59b8523d45af85fc9209775ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  additionalOrder: 1
 --- !u!61 &4235586615651389115
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -196,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d9d3b59b8523d45af85fc9209775ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalOrder: 50
+  additionalOrder: 2
 --- !u!114 &3316734646293463829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,6 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6321764773717203927}
   - component: {fileID: 1065859924210055836}
+  - component: {fileID: 440446262406183159}
   m_Layer: 0
   m_Name: PlaceHolder
   m_TagString: Untagged
@@ -472,6 +459,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &440446262406183159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183766781187154256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d9d3b59b8523d45af85fc9209775ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additionalOrder: 1
 --- !u!1 &5861838867043799890
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,8 +994,8 @@ Transform:
   m_GameObject: {fileID: 7881268112473125175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.347, z: -0.048982147}
-  m_LocalScale: {x: 0.5079344, y: 0.5079344, z: 0.5079344}
+  m_LocalPosition: {x: 0, y: -0.347, z: -0.048982}
+  m_LocalScale: {x: 0.1286651, y: 0.1286651, z: 0.1286651}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1469662210835114384}
@@ -1258,7 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d9d3b59b8523d45af85fc9209775ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalOrder: 50
+  additionalOrder: 2
 --- !u!114 &6293381653887057571
 MonoBehaviour:
   m_ObjectHideFlags: 0

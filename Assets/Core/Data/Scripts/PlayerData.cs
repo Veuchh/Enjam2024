@@ -7,6 +7,7 @@ public static class PlayerData
 
     public static int seed ;
     public static bool IsAttacking;
+    public static float bestTime;
 
     public static bool CanMove => !IsAttacking;
 
