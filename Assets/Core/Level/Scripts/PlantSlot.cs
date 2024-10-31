@@ -35,6 +35,10 @@ public class PlantSlot : MonoBehaviour
     [SerializeField] SoundEffectData pumpkinDestroyedSFX;
     [SerializeField] SoundEffectData pumpkinDismantledSFX;
     [SerializeField] SoundEffectData pumpkinSoldSFX;
+    [SerializeField] SoundEffectData pumpkinAttackedSFX;
+    [SerializeField] float attackSFXCooldown = .5f;
+
+    float NextAllowedAttackSFX;
     float pumpkinCurrentHP = 100;
 
     public SlotState slotState = SlotState.empty;
@@ -90,6 +94,12 @@ public class PlantSlot : MonoBehaviour
             if (pumpkinCurrentHP <= 0)
             {
                 DestroyPumpkin();
+            }
+
+            if (NextAllowedAttackSFX < Time.time && currentAttackerAmount > 0)
+            {
+                AudioPlayer.Instance.PlayAudio(pumpkinAttackedSFX);
+                NextAllowedAttackSFX = Time.time + currentAttackerAmount;
             }
         }
     }
