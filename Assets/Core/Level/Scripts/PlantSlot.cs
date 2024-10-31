@@ -63,6 +63,7 @@ public class PlantSlot : MonoBehaviour
 
     private void Awake()
     {
+        slots.RemoveAll(item => item == null);
         slots.Add(this);
         ResetSlot();
         Highlight(false);
