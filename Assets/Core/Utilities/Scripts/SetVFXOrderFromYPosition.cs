@@ -15,8 +15,9 @@ public class SetVFXOrderFromYPosition : MonoBehaviour
     {
         foreach (var vfx in renderers)
         {
-            if (vfx != null)
+            if (vfx == null)
                 return;
+
             vfx.sortingOrder = -Mathf.RoundToInt(transform.position.y) * 10 + additionalOrder;
         }
     }
