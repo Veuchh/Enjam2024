@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1486974921865605643}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.361, z: 0}
+  m_LocalPosition: {x: 0, y: -0.097, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -670,7 +670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.093}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2157214150211039812
@@ -994,8 +994,8 @@ Transform:
   m_GameObject: {fileID: 7881268112473125175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.048982147}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.347, z: -0.048982147}
+  m_LocalScale: {x: 0.5079344, y: 0.5079344, z: 0.5079344}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1469662210835114384}
@@ -1044,8 +1044,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -7060797839338906237, guid: 65ef7a11ae52b2d4ebea7a643bb07155, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d9d3b59b8523d45af85fc9209775ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalOrder: -1
+  additionalOrder: 4
 --- !u!1 &8223593679634796230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,7 +1366,8 @@ MonoBehaviour:
   minSeedOnDismantle: 1
   maxSeedOnDismantle: 10
   pumpkinDisplay: {fileID: 1486974921865605643}
-  spr: {fileID: 480802980813038952}
+  clodSpr: {fileID: 480802980813038952}
+  pumpkinSpr: {fileID: 1065859924210055836}
   enemyLayout: {fileID: 6495665495750751111}
   enemyDisplayAmount: {fileID: 5842706813886978995}
   sellUISpriteRenderer: {fileID: 7145522852160964851}
@@ -1379,6 +1380,8 @@ MonoBehaviour:
   pumpkinSoldSFX: {fileID: 11400000, guid: ae02226f97422ae47b8b708668954bf6, type: 2}
   pumpkinAttackedSFX: {fileID: 11400000, guid: 4003360b039151c44b975c27f2724f7b, type: 2}
   attackSFXCooldown: 0.5
+  highlightedColor: {r: 1, g: 1, b: 1, a: 1}
+  neutralColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
   slotState: 0
   IsSelling: 0
   isDismantling: 0

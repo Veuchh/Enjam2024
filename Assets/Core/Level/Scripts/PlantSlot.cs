@@ -24,7 +24,8 @@ public class PlantSlot : MonoBehaviour
     [SerializeField] int minSeedOnDismantle = 1;
     [SerializeField] int maxSeedOnDismantle = 10;
     [SerializeField] GameObject pumpkinDisplay;
-    [SerializeField] SpriteRenderer spr;
+    [SerializeField] SpriteRenderer clodSpr;
+    [SerializeField] SpriteRenderer pumpkinSpr;
     [SerializeField] GameObject enemyLayout;
     [SerializeField] TextMeshPro enemyDisplayAmount;
     [SerializeField] SpriteRenderer sellUISpriteRenderer;
@@ -37,6 +38,8 @@ public class PlantSlot : MonoBehaviour
     [SerializeField] SoundEffectData pumpkinSoldSFX;
     [SerializeField] SoundEffectData pumpkinAttackedSFX;
     [SerializeField] float attackSFXCooldown = .5f;
+    [SerializeField] Color highlightedColor;
+    [SerializeField] Color neutralColor;
 
     float NextAllowedAttackSFX;
     float pumpkinCurrentHP = 100;
@@ -62,6 +65,7 @@ public class PlantSlot : MonoBehaviour
     {
         slots.Add(this);
         ResetSlot();
+        Highlight(false);
     }
 
     public void Plant()
@@ -165,16 +169,6 @@ public class PlantSlot : MonoBehaviour
         hpBar.gameObject.SetActive(newState == SlotState.planted);
         pumpkinDisplay.SetActive(newState == SlotState.planted);
         slotState = newState;
-
-        switch (newState)
-        {
-            case SlotState.empty:
-                spr.color = Color.black;
-                break;
-            case SlotState.planted:
-                spr.color = Color.green;
-                break;
-        }
     }
 
     void RemoveAllAttackers()
@@ -201,11 +195,7 @@ public class PlantSlot : MonoBehaviour
 
     internal void Highlight(bool isHighlighted)
     {
-        if (isHighlighted)
-        {
-            spr.color = Color.red;
-        }
-        else
-            SetNewSlotState(slotState);
+        clodSpr.color = isHighlighted ? highlightedColor : neutralColor;
+        pumpkinSpr.color = isHighlighted ? highlightedColor : neutralColor;
     }
 }
