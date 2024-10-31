@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] Button startButton;
     [SerializeField] Button tutorialButton;
+    [SerializeField] GameObject tutorialScreen;
     [SerializeField] Button quitButton;
     [SerializeField] string gameSceneName = "Game";
 
@@ -29,7 +30,17 @@ public class MainMenu : MonoBehaviour
 
     void OnTutorialButtonPressed()
     {
-        //TODO : DISPLAY TUTORIAL
+        tutorialScreen.SetActive(true); 
+        startButton.interactable = false;
+        tutorialButton.interactable = false;
+        quitButton.interactable = false;
+    }
+
+    public void OnTutorialClosed()
+    {
+        startButton.interactable = true;
+        tutorialButton.interactable = true;
+        quitButton.interactable = true;
     }
 
     void OnQuitButtonPressed()

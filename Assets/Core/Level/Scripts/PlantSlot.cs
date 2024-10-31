@@ -179,7 +179,7 @@ public class PlantSlot : MonoBehaviour
 
     void RemoveAllAttackers()
     {
-        currentAttackerAmount = Mathf.Max(0, currentAttackerAmount - 1);
+        currentAttackerAmount = 0;
         enemyLayout.SetActive(false);
     }
 
@@ -197,5 +197,15 @@ public class PlantSlot : MonoBehaviour
 
         if (currentAttackerAmount <= 0)
             enemyLayout.SetActive(false);
+    }
+
+    internal void Highlight(bool isHighlighted)
+    {
+        if (isHighlighted)
+        {
+            spr.color = Color.red;
+        }
+        else
+            SetNewSlotState(slotState);
     }
 }

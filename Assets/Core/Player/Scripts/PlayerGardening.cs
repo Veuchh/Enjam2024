@@ -8,6 +8,7 @@ public class PlayerGardening : MonoBehaviour
     [SerializeField]
     int defaultSeedAmount = 100;
     List<PlantSlot> nearbySlots = new List<PlantSlot>();
+    PlantSlot highlightedSlot;
 
     private void Start()
     {
@@ -15,9 +16,28 @@ public class PlayerGardening : MonoBehaviour
         GameManager.Instance.UpdateSeedUI();
     }
 
+    private void Update()
+    {
+        PlantSlot closest = ClosestSlot();
+        if (highlightedSlot != closest)
+        {
+            if (highlightedSlot != null)
+            {
+                highlightedSlot.Highlight(false);
+                highlightedSlot = null;
+            }
+
+            if (closest != null)
+            {
+                closest.Highlight(true);
+                highlightedSlot = closest;
+            }
+        }
+    }
+
     public void OnInteract()
     {
-        if (nearbySlots.Count==0)
+        if (nearbySlots.Count == 0)
             return;
 
         PlantSlot closest = ClosestSlot();
@@ -36,7 +56,6 @@ public class PlayerGardening : MonoBehaviour
             {
                 closest.Sell();
             }
-
         }
     }
 

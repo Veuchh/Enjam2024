@@ -140,6 +140,8 @@ MonoBehaviour:
   speed: 3
   attackRange: 1
   maxHP: 1
+  ratDeathSFX: {fileID: 11400000, guid: 97204ee1dd8f25c44b58eb77d2638cb2, type: 2}
+  ratSplatterSFX: {fileID: 11400000, guid: 4be0203c2882e40468d47424c3d33ae0, type: 2}
   blood: {fileID: 7478509367550081771, guid: 53d2eae66f80c6a4d827138fe7c592c4, type: 3}
 --- !u!50 &2476998166834860787
 Rigidbody2D:

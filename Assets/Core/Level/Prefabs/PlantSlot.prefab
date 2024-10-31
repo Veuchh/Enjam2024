@@ -1373,6 +1373,12 @@ MonoBehaviour:
   pumpkinMaxHP: 100
   ratDPS: 1
   hpBar: {fileID: 6406326341158421433}
+  plantSFX: {fileID: 11400000, guid: cac6c4c6044628140814e1e97a978d22, type: 2}
+  pumpkinDestroyedSFX: {fileID: 11400000, guid: d610665411cec38479af339e120f51a1, type: 2}
+  pumpkinDismantledSFX: {fileID: 11400000, guid: b70f4ea407cfbc34ca816d590a2925d7, type: 2}
+  pumpkinSoldSFX: {fileID: 11400000, guid: ae02226f97422ae47b8b708668954bf6, type: 2}
+  pumpkinAttackedSFX: {fileID: 11400000, guid: 4003360b039151c44b975c27f2724f7b, type: 2}
+  attackSFXCooldown: 0.5
   slotState: 0
   IsSelling: 0
   isDismantling: 0
