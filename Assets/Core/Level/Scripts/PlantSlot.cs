@@ -36,6 +36,10 @@ public class PlantSlot : MonoBehaviour
     public SlotState slotState = SlotState.empty;
     public bool IsSelling = false;
     public bool isDismantling = false;
+
+    // VFX
+    [SerializeField] GameObject dismantledVFX;
+
     int currentAttackerAmount;
     float startGrowthTime;
     float endGrowthTime;
@@ -68,6 +72,7 @@ public class PlantSlot : MonoBehaviour
     public void Dismantle()
     {
         removeRoutine = StartCoroutine(RemovePumpkinDelay(true));
+        Instantiate(dismantledVFX, transform.position, Quaternion.identity);
     }
 
     private void Update()
