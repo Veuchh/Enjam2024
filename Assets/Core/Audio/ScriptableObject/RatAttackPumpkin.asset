@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RatAttackPumpkin
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 9d79c3d2c70abb14a85f47aac4047d67, type: 3}
-  - {fileID: 8300000, guid: d63a64a1e898793439858eec2922bffe, type: 3}
+  - {fileID: 8300000, guid: 0a482399cfac867489c011532c3ae2b6, type: 3}
+  - {fileID: 8300000, guid: c41fa2a9f73d3254fb4655f9ad9dac04, type: 3}

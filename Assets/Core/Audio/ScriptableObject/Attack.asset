@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Attack
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 607ed37f0f5e75744a25fc661e0e0c7e, type: 3}
-  - {fileID: 8300000, guid: 6c7f330220a76f6499950cb1185a3425, type: 3}
+  - {fileID: 8300000, guid: adc44be41382d8d4aa7ecfb64e65a405, type: 3}
+  - {fileID: 8300000, guid: 90b6e088d9945114b909aa53c136257b, type: 3}

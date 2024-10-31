@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5852159107862863513}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000000014901159, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_LocalScale: {x: 0.0800955, y: 0.0800955, z: 0.0800955}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5814903513370112903}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8581045416078829690
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 277854653, guid: d9e1fc45f9f6d604d8c69f31f53bf24c, type: 3}
   m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   maxHP: 1
   ratDeathSFX: {fileID: 11400000, guid: 97204ee1dd8f25c44b58eb77d2638cb2, type: 2}
   ratSplatterSFX: {fileID: 11400000, guid: 4be0203c2882e40468d47424c3d33ae0, type: 2}
+  gfx: {fileID: 8276858625114637749}
   blood: {fileID: 7478509367550081771, guid: 53d2eae66f80c6a4d827138fe7c592c4, type: 3}
 --- !u!50 &2476998166834860787
 Rigidbody2D:

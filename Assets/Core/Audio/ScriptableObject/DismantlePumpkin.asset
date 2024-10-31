@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DismantlePumpkin
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: d47f84d9ca1fbdf448c55fbe86706dce, type: 3}
+  - {fileID: 8300000, guid: 845e53b1dcac255409fd1f5e37bfeccb, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlantPumpkin
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 53ab38d132dc5e84093141fdc3858106, type: 3}
+  - {fileID: 8300000, guid: cb5cb72f0b4894649b41ad05d33dfdf1, type: 3}

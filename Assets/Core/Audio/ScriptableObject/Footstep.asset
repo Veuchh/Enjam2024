@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Footstep
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 543d752932102c749931b036ef6fe347, type: 3}
-  - {fileID: 8300000, guid: 661dfbf320eef2e4098ba50e137dfee6, type: 3}
-  - {fileID: 8300000, guid: e50a6e8e107fa9b459989e5904a1fbb4, type: 3}
+  - {fileID: 8300000, guid: 22a139cc458ccec45b6e69587d42533c, type: 3}
+  - {fileID: 8300000, guid: 75c850bcb3821434fa3fcd9efda5b9a4, type: 3}
+  - {fileID: 8300000, guid: 52fa84fd0f4799146a11c11afeaf3738, type: 3}

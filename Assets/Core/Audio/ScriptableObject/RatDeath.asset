@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RatDeath
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: c3ffc91e4af180d4ea992da6f7917560, type: 3}
-  - {fileID: 8300000, guid: 2f133da5a0e06db418537af8d5f5fbac, type: 3}
+  - {fileID: 8300000, guid: c3c08711d397d744b83a067147fc7cf6, type: 3}
+  - {fileID: 8300000, guid: 713eae8ac46e4e8468dc34464ac41402, type: 3}

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int maxHP = 1;
     [SerializeField] SoundEffectData ratDeathSFX;
     [SerializeField] SoundEffectData ratSplatterSFX;
+    [SerializeField] Transform gfx;
 
     // VFX
     [SerializeField] GameObject blood;
@@ -79,7 +80,10 @@ public class Enemy : MonoBehaviour
 
     void Move()
     {
-        transform.position += (targetPlant.transform.position - transform.position).normalized * speed * Time.deltaTime;
+        Vector3 normalizedDir = (targetPlant.transform.position - transform.position).normalized;
+        transform.position += normalizedDir * speed * Time.deltaTime;
+
+        gfx.rotation = Quaternion.Euler(0,(normalizedDir.x > 0 ? 0 : 180),0);
     }
 
     private void EvaluateBestTarget()

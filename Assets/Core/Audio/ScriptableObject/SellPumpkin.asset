@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SellPumpkin
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 0c9cb72a19b2abc4ab9e3ef9b44119e4, type: 3}
+  - {fileID: 8300000, guid: d8cffb1da04e15f429f4b17a1eb600dd, type: 3}
