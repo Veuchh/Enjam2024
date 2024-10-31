@@ -12,6 +12,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] GameObject westCollider;
     [SerializeField] GameObject eastCollider;
     [SerializeField] SoundEffectData attackData;
+    [SerializeField] Animator animator;
 
     public void OnAttackInFront()
     {
@@ -45,6 +46,7 @@ public class PlayerCombat : MonoBehaviour
 
     IEnumerator AttackRoutine()
     {
+        animator.SetTrigger("Attack");
         AudioPlayer.Instance.PlayAudio(attackData);
         PlayerData.IsAttacking = true;
         yield return new WaitForSeconds(attackStartupDelay);

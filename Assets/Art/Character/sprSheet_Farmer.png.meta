@@ -1,0 +1,944 @@
+fileFormatVersion: 2
+guid: 0f1b61032decdac47949590570ca63be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9078369043109327062
+    second: sprSheet_Farmer_0
+  - first:
+      213: 4385604033379545120
+    second: sprSheet_Farmer_1
+  - first:
+      213: 4133863914550675759
+    second: sprSheet_Farmer_2
+  - first:
+      213: -5549615693901635183
+    second: sprSheet_Farmer_3
+  - first:
+      213: -5456407619002838525
+    second: sprSheet_Farmer_4
+  - first:
+      213: -8585020277487326094
+    second: sprSheet_Farmer_5
+  - first:
+      213: 4836371021415272970
+    second: sprSheet_Farmer_6
+  - first:
+      213: -7109823449243458132
+    second: sprSheet_Farmer_7
+  - first:
+      213: -7192371295601130551
+    second: sprSheet_Farmer_8
+  - first:
+      213: 7318528497949049315
+    second: sprSheet_Farmer_9
+  - first:
+      213: 1344405512295032995
+    second: sprSheet_Farmer_10
+  - first:
+      213: 6550278407341840488
+    second: sprSheet_Farmer_11
+  - first:
+      213: -6575765935684111410
+    second: sprSheet_Farmer_12
+  - first:
+      213: -3195402162619767503
+    second: sprSheet_Farmer_13
+  - first:
+      213: 2626548113642338309
+    second: sprSheet_Farmer_14
+  - first:
+      213: 7963159793458206952
+    second: sprSheet_Farmer_15
+  - first:
+      213: -5589022394108914306
+    second: sprSheet_Farmer_16
+  - first:
+      213: 7540996471572357299
+    second: sprSheet_Farmer_17
+  - first:
+      213: -2374350936457947546
+    second: sprSheet_Farmer_18
+  - first:
+      213: 7839762551381403511
+    second: sprSheet_Farmer_19
+  - first:
+      213: -3275770319869236227
+    second: sprSheet_Farmer_20
+  - first:
+      213: -1413274959979596983
+    second: sprSheet_Farmer_21
+  - first:
+      213: 2677397477034832192
+    second: sprSheet_Farmer_22
+  - first:
+      213: -7733048601078932308
+    second: sprSheet_Farmer_23
+  - first:
+      213: 5163412335207954476
+    second: sprSheet_Farmer_24
+  - first:
+      213: 864752639495613533
+    second: sprSheet_Farmer_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprSheet_Farmer_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2080
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36e49262b794f949bee0aa190e1b401
+      internalID: 585278764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 2080
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488e93da378e38548b8fa7c931b30773
+      internalID: 1909683540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 2080
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b0c7ef14413534f884aaf0f26dfb93
+      internalID: 217368593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_3
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 2080
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d68ada07fde444abf90f78d558aa5d
+      internalID: -1729833005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1820
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c679b328a532b47b5ebe307f32f524
+      internalID: -170806530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1820
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98651eace393e4b4e8e91410e923b227
+      internalID: -1045031213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_6
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1820
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ab224aab5a8004aad554f28d4e3eff
+      internalID: 1252073530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_7
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1820
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799e5d06805bc6a41ba22b96f720febd
+      internalID: -115645183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1560
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd09787262e2c940af51c0b1cebec3a
+      internalID: 219523081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_9
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1560
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a3e7c7982cb7f49b11408e3dbd12af
+      internalID: 668643766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_10
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1560
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72041cc9b5286cb48b597cf3bb6be4bb
+      internalID: 553781635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_11
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1560
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b266284a04f21bb42bb5852bfa25c4a1
+      internalID: -1730252046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165eb3c1992a23e4cbea66bd247e123a
+      internalID: -1142634310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_13
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1300
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a25f7d68d89db4da8de116874dbe3b
+      internalID: 887221428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_14
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1300
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4397c3aea425d2845a3e79c763173aac
+      internalID: 2025367969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_15
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1300
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31ee94e82fbe0243a4a33396c68bdf0
+      internalID: -339224233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1040
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7911043598d59f3428482468544a2a9b
+      internalID: -1144556003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1040
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2335a9f088869ed48ae75b44e3856bd7
+      internalID: 1728641332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_18
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1040
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4feb0536942914382011283aa2abd5
+      internalID: -2144707731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_19
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1040
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca5fe1ff6bfdb342ab3f6b2799bf19c
+      internalID: -144416136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c8bc0c8e3149d4eb60601c820a39ec
+      internalID: -376043981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_21
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 780
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a828c64587e29d40bac65454385c23c
+      internalID: 59660775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_22
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 780
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc83b921c90b6b48922aad41b618871
+      internalID: -253823000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8cc1b63e0bc02448b786b4c51599e8
+      internalID: -976913599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_24
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 520
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85526f02966726841b6946ae605a08bd
+      internalID: 1864583674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_25
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 520
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d85b24775fd3c45b63aa529c9cb60c
+      internalID: -1239123514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6a3080c3cf97746b8df27e53f4012a
+      internalID: 187477978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_27
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 260
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546cf546f084a73449b0f79648aa4c14
+      internalID: 1931825982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_28
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 260
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4d6f57cf7be4d44afa3914dbac5812
+      internalID: -69300683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc73ca4f7da7ce4fbacfcfc240bbd9c
+      internalID: 1766007374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_30
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef20c4bc9af968343bc0cd83a5ca8278
+      internalID: -739647446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprSheet_Farmer_31
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 260
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf31b10b879e9a48afa8377b62b8069
+      internalID: 1795045514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7e4b012040be5df40adc79c864c819d7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprSheet_Farmer_0: 585278764
+      sprSheet_Farmer_1: 1909683540
+      sprSheet_Farmer_10: 553781635
+      sprSheet_Farmer_11: -1730252046
+      sprSheet_Farmer_12: -1142634310
+      sprSheet_Farmer_13: 887221428
+      sprSheet_Farmer_14: 2025367969
+      sprSheet_Farmer_15: -339224233
+      sprSheet_Farmer_16: -1144556003
+      sprSheet_Farmer_17: 1728641332
+      sprSheet_Farmer_18: -2144707731
+      sprSheet_Farmer_19: -144416136
+      sprSheet_Farmer_2: 217368593
+      sprSheet_Farmer_20: -376043981
+      sprSheet_Farmer_21: 59660775
+      sprSheet_Farmer_22: -253823000
+      sprSheet_Farmer_23: -976913599
+      sprSheet_Farmer_24: 1864583674
+      sprSheet_Farmer_25: -1239123514
+      sprSheet_Farmer_26: 187477978
+      sprSheet_Farmer_27: 1931825982
+      sprSheet_Farmer_28: -69300683
+      sprSheet_Farmer_29: 1766007374
+      sprSheet_Farmer_3: -1729833005
+      sprSheet_Farmer_30: -739647446
+      sprSheet_Farmer_31: 1795045514
+      sprSheet_Farmer_4: -170806530
+      sprSheet_Farmer_5: -1045031213
+      sprSheet_Farmer_6: 1252073530
+      sprSheet_Farmer_7: -115645183
+      sprSheet_Farmer_8: 219523081
+      sprSheet_Farmer_9: 668643766
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

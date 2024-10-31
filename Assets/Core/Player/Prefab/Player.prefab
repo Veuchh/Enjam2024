@@ -40,7 +40,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302510135456822840}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -174,7 +174,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2891755288815173637}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -278,8 +278,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7205233182369924765}
   - component: {fileID: 4918403238762975661}
+  - component: {fileID: 2140765198060390184}
   m_Layer: 0
-  m_Name: GraphicsPlaceholder
+  m_Name: PlayerGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,8 +345,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0.16509432, b: 0.16509432, a: 1}
+  m_Sprite: {fileID: -1729833005, guid: 0f1b61032decdac47949590570ca63be, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -355,6 +356,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2140765198060390184
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553004186986306790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ec3d080777d38e40ba6e64c5c1ddbbb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7378130730733152010
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +418,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7378130730733152010}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -594,6 +617,7 @@ MonoBehaviour:
   moveSpeed: 10
   footstepCooldown: 0.33
   footstepSFX: {fileID: 11400000, guid: 961c703d7d08d1d4eb7b282b09a70872, type: 2}
+  animator: {fileID: 2140765198060390184}
 --- !u!50 &5717151699517879207
 Rigidbody2D:
   serializedVersion: 5
@@ -678,6 +702,7 @@ MonoBehaviour:
   westCollider: {fileID: 7378130730733152010}
   eastCollider: {fileID: 2891755288815173637}
   attackData: {fileID: 11400000, guid: d9be26b51467c1a4d91ad95b3c80efb4, type: 2}
+  animator: {fileID: 2140765198060390184}
 --- !u!114 &7174643583918416535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,7 +770,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8717983213750481867}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

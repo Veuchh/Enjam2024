@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
         isAttacking = false;
         targetPlant.onPumpkinDestroyed -= OnTargetDestroyed;
 
-        if (enemyAmount < 150)
+        if (enemyAmount < 150 && ratPrefab != null && this != null)
         {
             Instantiate(ratPrefab, transform.position + Vector3.left, Quaternion.identity);
             Instantiate(ratPrefab, transform.position + Vector3.right, Quaternion.identity);
@@ -119,8 +119,8 @@ public class Enemy : MonoBehaviour
         if (Time.time > nextAllowedSFX)
         {
             nextAllowedSFX = Time.time + ratDeathSFXcooldown;
-        AudioPlayer.Instance.PlayAudio(ratDeathSFX);
-        AudioPlayer.Instance.PlayAudio(ratSplatterSFX);
+            AudioPlayer.Instance.PlayAudio(ratDeathSFX);
+            AudioPlayer.Instance.PlayAudio(ratSplatterSFX);
 
         }
         if (isAttacking)
