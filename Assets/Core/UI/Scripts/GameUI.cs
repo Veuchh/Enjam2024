@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class GameUI : MonoBehaviour
 
     [SerializeField] Image remainingTimeBar;
     [SerializeField] TextMeshProUGUI seedDisplay;
+    [SerializeField] GameObject seedUI;
 
 
     private void Awake()
@@ -24,5 +26,13 @@ public class GameUI : MonoBehaviour
     public void UpdateSeedAmount(int seed)
     {
         seedDisplay.text = seed.ToString();
+        PlayAnim();
+    }
+    public void PlayAnim()
+    {
+        seedUI.transform.DOScale(1, .7f)
+            .From(2.4f)
+            .SetEase(Ease.InOutElastic)
+            .Play();
     }
 }
